@@ -15,7 +15,11 @@ In different benchmarks, this model has better coding capability than llama 3.1 
 It yielded around ~63.7% accuracy.
 
 ### Gemini 2.0 Flash
-Used through the API. This model had quite consistent performance. But ultimately yielded ~74.3% accuracy.
+Used through the API. This model had quite consistent performance. But ultimately yielded ~74.3% accuracy in primary attempt.
 
-## Why accuracy is lower than expected
-Observing the predictions, majority of the wrong results was just errors while running the generated code. Prompt engineering should be able to fix most of them. This requires more testing and experiments. While fine tuning may help the smaller models, Gemini 2.0 Flash should be able to provide more accurate predictions itself.
+After improving the prompt, the code errors were mostly gone and the accuracy increased to ~84.67%.
+
+## Observation
+Observing the predictions, majority of the wrong results was just errors while running the generated code. Prompt engineering helped to fix most of them. For further improvement, while fine tuning may help the smaller models, Gemini 2.0 Flash should be able to provide more accurate predictions itself.
+
+Since, the official evaluator could not be used, there can be incorrect answers in the `answers_lite.txt` file which was used to calculate accuracy externally.
