@@ -19,6 +19,17 @@ Used through the API. This model had quite consistent performance. But ultimatel
 
 After improving the prompt, the code errors were mostly gone and the accuracy increased to ~84.67%.
 
+## Important
+
+After testing and reviewing, I noticed there are incorrect answers in the `answer_list.txt` file provided. For example,
+- 128th question asks for 3 values but the provided answer lists only 1.
+- 129th question incorrectly gives [15, 5] while the dataset is clearly [12, 8]
+- 132th question asks for 4 values but the provided answer lists only 1.
+
+There are more like these.
+
+So, in reality, the accuracy is higher than mentioned here but we can't just verify it as the full correct anwers key list is not available.
+
 ## Observation
 Observing the predictions, majority of the wrong results was just errors while running the generated code. Prompt engineering helped to fix most of them. For further improvement, while fine tuning may help the smaller models, Gemini 2.0 Flash should be able to provide more accurate predictions itself.
 
